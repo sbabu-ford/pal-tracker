@@ -3,14 +3,7 @@ package io.pivotal.pal.tracker;
 import java.util.*;
 
 public class InMemoryTimeEntryRepository implements  TimeEntryRepository {
-    private HashMap<Long, TimeEntry> map = new HashMap<>(){
-        {
-            /*put(1L, new TimeEntry(1, 101, 1001, LocalDate.of(2019, Month.JUNE, 4),10));
-            put(2L, new TimeEntry(2, 102, 1002, LocalDate.of(2019, Month.JUNE, 5),20));
-            put(3L, new TimeEntry(3, 103, 1003, LocalDate.of(2019, Month.JUNE, 6),30));*/
-        }
-    };
-
+    private HashMap<Long, TimeEntry> map = new HashMap<>();
     private long latestId = 0;
 
     @Override
